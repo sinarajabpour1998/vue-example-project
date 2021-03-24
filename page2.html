@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page 1</title>
+    <title>Page 2</title>
     <script src="./js/vue.js"></script>
 </head>
 <body>
 <div id="app">
     <p>
-        {{ title }}
+        <a v-bind:href="aHref">{{ sayHello() }}</a>
     </p>
-    <input type="text" v-on:input="changeFullname">
-    <p>
-        {{ fullName }}
-    </p>
+    <div v-html="aTag"></div>
 </div>
 <script src="./js/app.js"></script>
 </body>
