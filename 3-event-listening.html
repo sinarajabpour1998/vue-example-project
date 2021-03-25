@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 3</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="increaseValue">Increase</button>
+    <p>
+        value : {{ counter }}
+    </p>
+    <button v-on:click="decreaseValue(2, $event)">Decrease</button>
+    <hr>
+    <p v-on:mousemove="coordinates">
+        Coordinates : {{ x }} / {{ y }}
+        - <span v-on:mousemove="stopCoordinate">Stop Coordinate</span>
+    </p>
+    <hr>
+    <p v-on:mousemove="coordinates">
+        Coordinates-2 : {{ x }} / {{ y }}
+        - <span v-on:mousemove.stop="">Stop Coordinate-2</span>
+    </p>
+    <hr>
+    <input v-on:keydown.enter="validateText">
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>
