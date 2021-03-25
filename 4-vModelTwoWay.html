@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 4</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="name">
+    <p>
+        {{ name }}
+    </p>
+    <hr>
+    <button v-on:click="increaseX">Increase X</button>
+    <p>{{ x_increment }}</p>
+    <button v-on:click="decreaseX">Decrease X</button>
+    <p>{{ x_increment_msg }}</p>
+</div>
+<script src="./js/app.js"></script>
+</body>
+</html>

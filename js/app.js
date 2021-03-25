@@ -7,7 +7,10 @@ new Vue({
         aHref: 'https://yahoo.com',
         counter: 0,
         x: 0,
-        y: 0
+        y: 0,
+        name: '',
+        x_increment: 0,
+        x_increment_msg: ''
     },
     methods: {
         changeFullname: function (event) {
@@ -36,6 +39,32 @@ new Vue({
         },
         validateText: function () {
             alert('Enter pressed!');
+        },
+        increaseX: function () {
+            this.x_increment ++;
+            this.checkIncrement;
+        },
+        decreaseX: function () {
+            this.x_increment --;
+            this.checkIncrement;
+        }
+    },
+    computed: {
+        checkIncrement: function () {
+            console.log('computed');
+            if (this.x_increment > 5){
+                this.x_increment_msg = 'the increment is grater than 5';
+            }else {
+                this.x_increment_msg = 'the increment is lower than 5';
+            }
+        }
+    },
+    watch: {
+        x_increment: function () {
+            var xi = this;
+            setTimeout(function () {
+                xi.x_increment = 200;
+            },2000);
         }
     }
 })
