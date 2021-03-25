@@ -65,6 +65,7 @@ new Vue({
             setTimeout(function () {
                 xi.x_increment = 200;
             },2000);
+            this.checkIncrement;
         }
     }
 })
